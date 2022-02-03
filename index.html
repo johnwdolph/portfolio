@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel="stylesheet" href="./index.css">
+
+  <meta charset='UTF-8' />
+  <link rel='icon' type='image/svg+xml' href='./favicon.svg' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Portfolio</title>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://unpkg.com/three/build/three.module.js",
+      "orbitcontrols": "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js"
+    } }
+  </script>
+</head>
+<body>
+  <canvas id='bg'></canvas>
+
+  <main>
+    <header>
+      <h1>Main Heading</h1>
+      <h3>Sub Heading</h3>
+    </header>
+
+    <section>
+      <h2>Click the Images!</h2>
+        <img class="resizableImage" src="./images/sample.jpg">
+        <img class="resizableImage" src="./images/sample.jpg">
+        <img class="resizableImage" src="./images/sample.jpg">
+    </section>
+
+    <blockquote>
+      <p class="centered-text">Thanks for visiting!</p>
+    </blockquote>
+
+    <script type='module' src='./index.js'></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+  </main>
+
+
+</body>
+
+</html>
