@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 
 # abort on errors
-set -e
+# set -e
 
+#update timestamp
+npx gulp
 
 # build
 npm run build
@@ -19,7 +21,7 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -f https://github.com/johnwdolph/portfolio.git main
+# git push -f https://github.com/johnwdolph/sample-website.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f https://github.com/johnwdolph/portfolio.git main:gh-pages

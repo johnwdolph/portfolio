@@ -38,10 +38,14 @@ function moveCamera() {
 document.body.onscroll = moveCamera;
 
 function animate() {
-  requestAnimationFrame(animate);
-  mesh.rotation.x += 0.0005;
-  mesh.rotation.y += 0.0002;
-  mesh.rotation.z += 0.0005;
+  let rotation = true;
+  if(rotation === true)
+  {
+    requestAnimationFrame(animate);
+    mesh.rotation.x += 0.0005;
+    mesh.rotation.y += 0.0002;
+    mesh.rotation.z += 0.0005;
+  }
   renderer.render(scene, camera);
 }
 

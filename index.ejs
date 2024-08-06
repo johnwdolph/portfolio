@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <link rel="stylesheet" href="./index.css">
+
+  <meta charset='UTF-8' />
+  <link rel='icon' type='image/svg+xml' href='./favicon.svg' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Portfolio</title>
+  <script type="importmap">
+    { "imports": {
+      "three": "https://unpkg.com/three/build/three.module.js",
+      "orbitcontrols": "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js"
+    } }
+  </script>
+</head>
+<body>
+  <canvas id='bg'></canvas>
+
+  <main>
+    <header>
+      <h1><%= my_name %></h1>
+      <h3><%= sub_title %></h3>
+    </header>
+
+    <section>
+      <h2>Welcome!</h2>
+      <p class="centered-text">This website is currently under development.</p>
+    </section>
+
+    <section>
+        <h2>Click the Images!</h2>
+        <div id="showcase">
+            <% showcase.forEach(function(image) { %>
+            <img class="resizableImage" src="./images/showcase/<%= image %>" alt="<%= image %>">
+            <% }); %>
+        </div>
+      </section>  
+
+    <div id="ending">
+        <blockquote>
+        <p class="centered-text"><%= closing_remark %></p>
+        </blockquote>
+    </div>
+
+    <section>
+        <p id="statistics">Last Updated: <%= date %></p>
+    </section>
+
+    <script type='module' src='./index.js'></script>
+
+  </main>
+
+</body>
+
+</html>
